@@ -10,16 +10,21 @@ router.get("/", function(req, res){
 
 // show the register form
 router.get("/register", function(req, res){
-	res.render("register");
+   res.render("register", {page: 'register'}); 
+});
+
+//show login form
+router.get("/login", function(req, res){
+   res.render("login", {page: 'login'}); 
 });
 
 // handle sign up logic
 router.post("/register", function(req, res){
 	var newUser = new User({username: req.body.username});
 	User.register(newUser, req.body.password, function(err, user){
-		if(err){
-			req.flash("error", err.message);
-			return res.redirect("/register");
+			if(err){
+			console.log(err);
+			return res.render("register", {error: err.message});
 		}
 		passport.authenticate("local")(req, res, function(){
 			req.flash("success", "Welcome to YelpCamp " + user.username);
