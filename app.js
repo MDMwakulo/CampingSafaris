@@ -53,35 +53,6 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT || 5000, process.env.IP, function(){
-	console.log("The CampingSafaris Server has Started!");
+	console.log("The CampingSafaris' Server has Started!");
 });
 
-// ------------------------------------------------------------------------------------------------------
-
-// https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/699558/pexels-photo-699558.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/266436/pexels-photo-266436.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/1309584/pexels-photo-1309584.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// https://images.pexels.com/photos/803226/pexels-photo-803226.jpeg?auto=compress&cs=tinysrgb&h=350
-
-// ------------------------------------------------------------------------------------------------------
-
-// Mongodb Instructions
-
-// sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
-// echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.6 multiverse" | sudo tee/etc/apt/sources.list.d/mongodb-org-3.6.list
-// sudo apt-get update
-// sudo apt-get install -y mongodb-org
-
-// rm -rf mongod
-//mkdir data
-// echo "mongod --dbpath=data --nojournal" > mongod
-// chmod a+x mongod
