@@ -52,7 +52,7 @@ app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-app.listen(process.env.PORT || 5000, process.env.IP, function(){
+app.listen(process.env.PORT || 4000, process.env.IP, function(){
 	console.log("The CampingSafaris' Server has Started!");
 });
 
