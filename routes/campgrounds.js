@@ -132,7 +132,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, upload.single("image"), 
 });
 
 // DESTROY CAMPGROUND ROUTE
-router.delete('/:id', middleware.checkCampgroundOwnership, function(req, res) {
+router.delete('/:id', function(req, res) {
 	Campground.findById(req.params.id, async function(err, campground) {
 		if (err) {
 			req.flash("error", err.message);
@@ -151,6 +151,8 @@ router.delete('/:id', middleware.checkCampgroundOwnership, function(req, res) {
 	 }
 	});
 });
+
+// middleware.checkCampgroundOwnership,
 
 module.exports = router;
 
